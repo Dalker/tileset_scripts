@@ -1,0 +1,22 @@
+*Bash Scripts for Sprite Tilesets*
+
+* Motivation
+This little scripts were developped in response to a remark on one of QuillRaven's YouTube
+videos about programming a game with Kotlin using libGDX, namely the one at the url
+https://www.youtube.com/watch?v=y8Wlv_CizOY
+* separate_frames.sh
+** goal
+Separate frames from a png sprite tileset into individual files
+** example usage
+~separate_frames.sh player.png 48x48 player/frame_~
+-> will split the file =playe.png= into several png image files of dimensions =48x48=,
+with names =player/frame_00=, =player/frame_01=,  ...
+* namecopy.sh
+** goal
+  Copy some .png files named as =basename_xx.png=, where =xx= are numbers =00=, =01=, ...
+  to a new base name and numbering such as newbase/name_y.png, ... NB: source assumed to
+  use two digits for numbering, destination uses only one
+** example usage
+~namecopy.sh player_frames/frame_ 18 6 player/walk_front_~
+-> will copy files =player_frames/frame_18.png= to =player_frames/frame_24.png=
+into files =player/walk_front_0= to  =player/walk_front_5=
